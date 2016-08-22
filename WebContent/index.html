@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Mihai-Catalin Arsenescu">
+<title>Simple dating web site</title>
+<style>
+	fieldset {
+		background-color: lightyellow;
+		border: 10px solid yellow;
+		margin-bottom: 10px;
+		padding: 10px;
+		width: 720px;
+	}
+	label {
+		width: 180px;
+		display: inline-block;
+		text-align: right-align top-align;
+	}
+	textarea {
+		width: 360px;
+		height: 50px
+	}
+	.width-auto {
+		width: auto;
+	}
+	.other-text {
+		text-align: center;
+	}
+	label:HOVER {
+		font-size: 120%;
+	}
+	input:HOVER {
+		font-size: 120%;
+	}
+	select:HOVER {
+		font-size: 120%;
+	}
+</style>
+</head>
+
+<body>
+	<h2>Please Enter Your Details For Our Dating Website</h2>
+	<form>
+		<fieldset>
+			<legend>Your face</legend>
+			<label for="select_photo">Select photo: </label>
+			<input type="file" id="select_photo" name="select_photo" required>
+			<br>
+			<img id="preview" name="preview_photo" src="#">			
+		</fieldset>
+		<fieldset>
+			<legend>Your general details</legend>
+			<label for="text_name">Name: </label>
+			<input type="text" id="text_name" name="text_name" placeholder="Your name goes here." required>
+			<br>
+			<label class="width-auto" for="gender">Gender: </label>
+			<input type="radio" id="gender" name="gender" value="male" required>Male  
+			<input type="radio" id="gender" name="gender" value="female" required>Female
+			<br>
+			<label for="number_age">Age: </label>
+			<input type="number" id="number_age" name="number_age" required>
+			<br>
+			<label for="date">Date of birth: </label>
+			<input type="date" id="date" name="date">
+			<br>
+			<label for="color">Favorite color:</label> 
+			<input type="color" id="color" name="color">
+			<br>
+			<label for="country">Which country: </label>
+			<select id="country" name="country" >
+				<option value="Romania">Romania</option>
+				<option value="United States of America">United States of America</option>
+				<option value="Germany">Germany</option>
+				<option value="Italy">Italy</option>
+				<option value="France">France</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Your indicators</legend>
+			<label for="height">Height: </label>
+			<span class="other-text">Short</span>
+			<input type="range" min="40" max="250" id="height" name="height">
+			<span class="other-text">Tall</span>
+			<br>
+			<label for="salary">Salary: </label>
+			<span class="other-text">Poor</span>
+			<input type="range" min="1000" max="90000" id="salary" name="salary">
+			<span class="other-text">Rich</span>
+			<br>	
+		</fieldset>
+		<fieldset>
+			<legend>Your contact information</legend>
+			<label for="email">Email: </label>
+			<input type="email" id="email" name="email" required>
+			<br>
+			<label for="mobile">Mobile: </label>
+			<input type="tel" id="mobile" name="mobile">
+			<br>
+			<label for="address">Address: </label>
+			<textarea id="address" name="address" cols="40" rows="5"></textarea>
+			<br>
+			<label class="width-auto" for="address">Method to contact you: </label>
+			<input type="checkbox" id="address" name="address" value="email">Email
+			<input type="checkbox" id="address" name="address" value="whatsapp">Whatsapp
+			<input type="checkbox" id="address" name="address" value="chat">In-app chat
+		</fieldset>
+		<input type="submit" value="Submit">
+	</form>
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
